@@ -22,7 +22,5 @@ object SparkDriver {
 
     println("count = " + c)
 
-    println("ciao mondooooo o mia bella madunina")
-
   }
 }
