@@ -3,8 +3,14 @@ package spark_context
 import org.apache.spark.{SparkConf, SparkContext}
 
 object SparkDriver {
+  
+  def disableLog(): Unit = {
+    Logger.getLogger("org").setLevel(Level.OFF)
+    Logger.getLogger("akka").setLevel(Level.OFF)
+  }
+
   def main(args: Array[String]): Unit = {
-    println("ciao")
+    disableLog()
 
     var conf = new SparkConf().setAppName("Spark Driver").setMaster("local")
 
